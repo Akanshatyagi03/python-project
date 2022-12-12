@@ -1,0 +1,50 @@
+task = []
+completed = []
+
+def add(i):
+    task.append(i)
+
+
+def delete(i):
+    print("n"+i + " is deleted from the list")
+    task.remove(i)
+
+      
+
+def view():
+    n = 1
+    print("nTasks in list")
+    for t in task:
+        print(str(n)+" : "+t)
+        n = n + 1
+    n = 1 
+    if(completed != []):
+        print("Tasks Completed")
+        for t in completed:
+            print(str(n)+" : "+t)
+            n = n + 1
+    else:
+        print("No task completed yetn")
+      
+
+def done(i):
+    print("n"+ i + " is donen")
+    task.remove(i)
+    completed.append(i)
+
+
+a=input("task to add")
+b=input("task to add")
+c=input("task to add")
+d=input("task done")
+e=input("task to delet")
+
+import task as todolist
+todolist.add(a)
+todolist.add(b)
+todolist.add(c)
+todolist.view()
+todolist.done(d)
+todolist.view()
+todolist.delete(e)
+todolist.view() 
